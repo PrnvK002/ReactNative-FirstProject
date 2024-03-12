@@ -38,6 +38,6 @@ const styles = StyleSheet.create({
   },
   contactDescription: {
     color: '#6f6d78',
-    fontWeight: '600'
-  }
+    fontWeight: '600',
+  },
 });
