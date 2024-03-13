@@ -5,6 +5,7 @@ import ElevatedCards from './components/ElevatedCards';
 import TrendingPlace from './components/TrendingPlace';
 import Blogcard from './components/Blogcard';
 import ContactsList from './components/ContactsList';
+// import AnimatedButton from './components/AnimatedButton';
 
 export default function App(): JSX.Element {
   return (
@@ -16,6 +17,7 @@ export default function App(): JSX.Element {
           <TrendingPlace />
           <Blogcard />
           <ContactsList />
+          {/* <AnimatedButton /> */}
         </View>
       </ScrollView>
     </SafeAreaView>

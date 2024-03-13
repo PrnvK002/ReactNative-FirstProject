@@ -1,5 +1,13 @@
 import React from 'react';
-import {Text, StyleSheet, View, Image} from 'react-native';
+import {
+  Text,
+  StyleSheet,
+  View,
+  Image,
+  TouchableHighlight,
+  Linking,
+  TouchableOpacity,
+} from 'react-native';
 
 export default function Blogcard() {
   const imageUrl: string =
@@ -14,8 +22,19 @@ export default function Blogcard() {
         </Text>
         <Image style={styles.cardImage} source={{uri: imageUrl}} />
         <View style={styles.cardFooter}>
-          <Text style={styles.link}>Read more</Text>
-          <Text style={styles.link}>Follow me</Text>
+          <TouchableHighlight
+            activeOpacity={0.6}
+            underlayColor="#DDDDDD"
+            onPress={() =>
+              Linking.openURL(
+                'https://www.syncfusion.com/blogs/post/top-6-javascript-es12-features-you-should-use.aspx',
+              )
+            }>
+            <Text style={styles.link}>Read more</Text>
+          </TouchableHighlight>
+          <TouchableOpacity onPress={() => console.log('pressed')}>
+            <Text style={styles.link}>Follow me</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
